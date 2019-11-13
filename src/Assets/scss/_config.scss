@@ -1,0 +1,38 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    // background: #bdc3c7;
+    // /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, #2c3e50, #979da1);
+    // /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to right, #2c3e50, #979da1);
+    // /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: white;
+}
+
+
+@mixin translateY($e) {
+    -webkit-transform: translateY($e);
+    -moz-transform: translateY($e);
+    transform: translateY($e);
+}
+
+@mixin transition($e) {
+    -webkit-transition: $e;
+    -moz-transition: $e;
+    transition: $e;
+}
+
+a {
+    text-decoration: none;
+    @include transition(.4s ease-in-out);
+    cursor: pointer;
+
+    &.hover {
+        color: slategrey;
+        @include transition(.4s ease-in-out);
+    }
+}
